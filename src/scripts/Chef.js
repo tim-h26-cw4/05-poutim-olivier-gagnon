@@ -20,6 +20,7 @@ export default class Chef {
     }
   }
   sendOrder() {
+    this.container.innerText = '';
     let total = 0;
     for (let i = 0; i < this.menu.length; i++) {
       if (this.menu[i].selectedType != '') {
