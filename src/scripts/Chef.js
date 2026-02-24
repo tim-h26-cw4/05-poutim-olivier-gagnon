@@ -19,5 +19,15 @@ export default class Chef {
       console.log(this.menu);
     }
   }
-  sendOrder() {}
+  sendOrder() {
+    let total = 0;
+    for (let i = 0; i < this.menu.length; i++) {
+      if (this.menu[i].selectedType != '') {
+        total++;
+      }
+    }
+    const p = document.createElement('p');
+    p.textContent = `Nombre total de poutine(s):${total}`;
+    this.container.appendChild(p);
+  }
 }
