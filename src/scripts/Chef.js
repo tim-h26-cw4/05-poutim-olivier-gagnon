@@ -2,7 +2,7 @@ import Poutine from './Poutine.js';
 export default class Chef {
   constructor(element) {
     this.element = element;
-    this.container = document.querySelector('.js-container');
+    this.container = this.element.querySelector('.js-container');
     this.menu = [];
     this.init();
   }
@@ -28,7 +28,7 @@ export default class Chef {
       }
     }
     const p = document.createElement('p');
-    p.textContent = `Nombre total de poutine(s):${total}`;
+    p.textContent = `Nombre total de poutine(s) : ${total}`;
     this.container.appendChild(p);
   }
 }
